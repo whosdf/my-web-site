@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>课程表</title>
+    <style>
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            padding: 24px;
+            color: #202b36;
+            background: #f3f6f4;
+            font-family: "Microsoft YaHei", sans-serif;
+        }
+        main { max-width: 1080px; margin: 0 auto; }
+        .topbar { margin-bottom: 24px; }
+        .topbar a { color: #176b5b; }
+        h1 { margin: 0 0 8px; font-size: 30px; }
+        .subtitle { margin: 0 0 24px; color: #5f6c72; }
+        .weekdays {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+            gap: 14px;
+            padding-left: 28px;
+        }
+        .weekdays > li {
+            padding: 16px 16px 16px 10px;
+            border-top: 3px solid #278674;
+            background: #fff;
+        }
+        h2 { margin: 0 0 12px; font-size: 18px; }
+        .lessons { margin: 0; padding-left: 20px; }
+        .lessons li { padding: 7px 0; border-bottom: 1px solid #e8eeeb; }
+        .lessons li:last-child { border-bottom: 0; }
+        time { display: block; color: #718079; font-size: 12px; }
+        @media (max-width: 480px) {
+            body { padding: 18px 14px; }
+            .weekdays { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <nav class="topbar" aria-label="页面导航">
+            <a href="index.html#top">返回首页</a>
+        </nav>
+        <h1 id="course">课程表</h1>
+        <p class="subtitle">本学期每周课程安排</p>
+        <ol class="weekdays">
+            <li>
+                <h2>星期一</h2>
+                <ul class="lessons">
+                    <li><time>08:00–09:40</time>语文</li>
+                    <li><time>10:00–11:40</time>数学</li>
+                    <li><time>14:00–15:40</time>英语</li>
+                </ul>
+            </li>
+            <li>
+                <h2>星期二</h2>
+                <ul class="lessons">
+                    <li><time>08:00–09:40</time>物理</li>
+                    <li><time>10:00–11:40</time>历史</li>
+                    <li><time>14:00–15:40</time>体育</li>
+                </ul>
+            </li>
+            <li>
+                <h2>星期三</h2>
+                <ul class="lessons">
+                    <li><time>08:00–09:40</time>英语</li>
+                    <li><time>10:00–11:40</time>化学</li>
+                    <li><time>14:00–15:40</time>地理</li>
+                </ul>
+            </li>
+            <li>
+                <h2>星期四</h2>
+                <ul class="lessons">
+                    <li><time>08:00–09:40</time>数学</li>
+                    <li><time>10:00–11:40</time>生物</li>
+                    <li><time>14:00–15:40</time>美术</li>
+                </ul>
+            </li>
+            <li>
+                <h2>星期五</h2>
+                <ul class="lessons">
+                    <li><time>08:00–09:40</time>语文</li>
+                    <li><time>10:00–11:40</time>信息技术</li>
+                    <li><time>14:00–15:40</time>音乐</li>
+                </ul>
+            </li>
+        </ol>
+    </main>
+</body>
+</html>
